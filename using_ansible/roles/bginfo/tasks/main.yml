@@ -1,0 +1,7 @@
+- name: Copy BGInfo
+  win_copy:
+    src: files/BGinfo.exe
+    dest: C:\BGinfo\BGinfo.exe
+
+- name: Apply BGInfo configuration
+  win_shell: C:\BGinfo\BGinfo.exe C:\BGinfo\config.bgi /silent /nolicprompt
