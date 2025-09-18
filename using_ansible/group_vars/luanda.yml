@@ -1,0 +1,5 @@
+domain_name: style.com
+site_name: Luanda
+dhcp_scope: "144.188.5.0/24"
+dfs_namespace: "\\\\luandavmdfs1.style.com\\SHARE"
+pdrive_quota_mb: 1024
