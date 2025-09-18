@@ -1,0 +1,5 @@
+domain_name: cab.style.com
+site_name: Cabinda
+dhcp_scope: "144.188.5.0/24"
+dfs_namespace: "\\\\cabindavmdfs1.style.com\\SHARE"
+pdrive_quota_mb: 1024
