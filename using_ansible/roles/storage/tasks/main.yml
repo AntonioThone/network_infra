@@ -1,0 +1,9 @@
+- name: Instalar Storage Services
+  win_feature:
+    name: FS-iSCSITarget-Server
+    state: present
+
+- name: Criar pasta de VHD
+  win_file:
+    path: C:\iSCSI
+    state: directory
