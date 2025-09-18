@@ -1,0 +1,14 @@
+all:
+  children:
+    luanda:
+      hosts:
+        luaw19vm1:
+          ansible_host: 144.188.5.10
+        luaw16vm2:
+          ansible_host: 144.188.5.11
+    cabinda:
+      hosts:
+        cabw19vm1:
+          ansible_host: 144.188.5.20
+        cabw16vm2:
+          ansible_host: 144.188.5.21
