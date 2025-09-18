@@ -1,0 +1,9 @@
+- name: install DFS
+  win_feature:
+    name: FS-DFS-Namespace, FS-DFS-Replication
+    state: present
+
+- name: create DFS Namespace
+  win_dfs_namespace:
+    path: "{{ dfs_namespace }}"
+    state: present
