@@ -1,0 +1,14 @@
+- name: Luanda's site configuration
+  hosts: luanda
+  become: yes
+  roles:
+    - ad
+    - dns
+    - dhcp
+    - file_server
+    - dfs
+    - storage
+    - iis
+    - ftp
+    - gpo
+    - bginfo
