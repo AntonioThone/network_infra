@@ -1,0 +1,14 @@
+- name: Cabinda's site configuration
+  hosts: cabinda
+  become: yes
+  roles:
+    - ad
+    - dns
+    - dhcp
+    - file_server
+    - dfs
+    - storage
+    - iis
+    - ftp
+    - gpo
+    - bginfo
