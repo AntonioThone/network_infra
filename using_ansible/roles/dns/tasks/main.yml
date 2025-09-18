@@ -1,0 +1,10 @@
+- name: install DNS
+  win_feature:
+    name: DNS
+    state: present
+
+- name: create DNS primary zone
+  win_dns_zone:
+    name: "{{ domain_name }}"
+    type: primary
+    replication: domain
