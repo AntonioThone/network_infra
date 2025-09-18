@@ -1,0 +1,6 @@
+- name: Create wallpaper Policy
+  win_gpo:
+    name: "Company Wallpaper"
+    state: present
+    gpo_links:
+      - "OU={{ site_name }},DC={{ domain_name.split('.')[0] }},DC={{ domain_name.split('.')[1] }}"
