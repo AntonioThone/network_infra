@@ -1,0 +1,17 @@
+- name: install AD DS
+  win_feature:
+    name: AD-Domain-Services
+    state: present
+
+- name: Promote server to a Domain Controller
+  win_domain:
+    dns_domain_name: "{{ domain_name }}"
+    domain_admin_user: "Administrator"
+    domain_admin_password: "P@ssword!"
+    safe_mode_password: "P@ssword!"
+    sate: domain_controller
+
+- name: create site OU
+  win_ou: 
+  name: "{{ site_name }}"
+  path: "DC={{ domain_name.splt('.')[0] }}, DC={{ domain_name.split('.')[1] }}"
