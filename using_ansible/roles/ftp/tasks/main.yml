@@ -1,0 +1,16 @@
+- name: Instalar FTP
+  win_feature:
+    name: Web-Ftp-Server
+    state: present
+
+- name: Criar pasta FTP
+  win_file:
+    path: C:\arquivos_ftp
+    state: directory
+
+- name: Criar site FTP
+  win_iis_ftp:
+    name: "ftp"
+    state: started
+    physical_path: C:\arquivos_ftp
+    port: 21
