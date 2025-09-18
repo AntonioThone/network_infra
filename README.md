@@ -11,10 +11,11 @@ O ambiente foi simulado no **VMware Workstation Pro 17**, proporcionando um labo
 A topologia da rede consiste em dois sites interconectados:
 
 * **SITE A (Luanda)**: IP: `144.188.5.0/24`
-    * **luaw19vm1 (Domain Controller)**: `144.188.5.2`
+    * **luaw19vm1 (Domain Controller)**: `144.188.5.10`
     * **luaw16vm2 (File Server)**: `144.188.5.11`
-* **SITE B (Cabinda)**: IP: `192.168.1.0/24`
-    * **cabw16vm2 (Servidor)**: `192.168.1.2`
+* **SITE B (Cabinda)**: IP: `144.188.5.0/24`
+    * **cabw19vm1 (Servidor)**: `144.188.5.20`
+    * **cabw16vm2 (Servidor)**: `144.188.5.21`
 
 Para uma visualização clara da arquitetura, consulte o diagrama abaixo:
 ---
