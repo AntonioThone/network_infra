@@ -1,0 +1,11 @@
+- name: install DHCP
+  win_feature:
+    name: DHCP
+    state: present
+
+- name: configure DHCP scope
+  win_dhcp_server_scope:
+    name: "Scope {{ site_name }}"
+    subnet:  "{{ dhcp_scope }}"
+    state: present
+
