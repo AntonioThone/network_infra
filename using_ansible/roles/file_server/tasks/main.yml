@@ -1,0 +1,15 @@
+- name: Install File Server
+  win_feature:
+    name: FS-FileServer
+    state: present
+
+- name: Create P:\ drive folder
+  win_file:
+    path: C:\Shares\PDrive
+    state: directory
+
+- name: Share P:\ drive
+  win_share:
+    name: PDrive
+    path: C:\Shares\PDrive
+    full: "Domain Users"
