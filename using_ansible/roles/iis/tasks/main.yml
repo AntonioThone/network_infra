@@ -1,0 +1,11 @@
+- name: Instalar IIS
+  win_feature:
+    name: Web-Server
+    state: present
+
+- name: Criar site da empresa
+  win_iis_website:
+    name: "style"
+    state: started
+    physical_path: C:\inetpub\style
+    port: 80
